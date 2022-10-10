@@ -1,0 +1,17 @@
+.header a{
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 600;
+    margin-left: 30px;
+    color: violet;
+}
+.header img{
+    width: 65px;
+    border-radius: 50%;
+}
+.header-img{
+background-image: url('./My\ project.jpg');
+width: 100%;
+border-radius: 5px;
+object-fit: cover;
+}

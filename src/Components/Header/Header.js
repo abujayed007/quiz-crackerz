@@ -7,7 +7,7 @@ const Header = () => {
     
     return (
         <div>
-            <div className='header d-flex justify-content-lg-around mt-4 me-5'>
+            <div className='header d-lg-flex justify-content-lg-between mt-4 me-5'>
             <Link className='fs-2'> <img  src="../../icon.png" alt="" /> Programming Crackers</Link>
            <div className=' flex-sm-col mt-3'>
             <Link to='/'>Home</Link>

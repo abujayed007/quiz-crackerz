@@ -11,13 +11,19 @@ const Header = () => {
             <Link className='fs-2'> <img  src="../../icon.png" alt="" /> Programming Crackers</Link>
            <div className=' flex-sm-col mt-3'>
             <Link to='/'>Home</Link>
-            <Link to='packages'>Packages</Link>
+            <Link to='/topics'>Topics</Link>
             <Link to='blog'>Blog</Link>
             <Link to='about'>About</Link>
            </div>
         </div>
-        <div style={{height:'500px', width:'100%'}} className='header-img mt-5 img-fluid'>
-        </div>
+        {/* <div className='header-img mt-5'>
+           
+          <div className='bg-title text-white'>
+            <h2>Where Is Success</h2>
+            <p>In The Practice Practice Practice </p>
+          </div>
+
+        </div> */}
         <div>
         </div>
         </div>

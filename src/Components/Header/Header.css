@@ -11,7 +11,12 @@
 }
 .header-img{
 background-image: url('./My\ project.jpg');
-width: 100%;
-border-radius: 5px;
-object-fit: cover;
+background-repeat: no-repeat;
+height: 650px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.bg-title{
+
 }

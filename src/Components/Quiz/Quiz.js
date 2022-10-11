@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
+import QuizFile from '../QuizFile/QuizFile';
 
-const Quiz = ({quiz}) => {
-    const {name, id, logo, total} = quiz
-    console.log(quiz)
+const Quiz = () => {
+    const quizes = useLoaderData()
+    const {data} = quizes
+    const {questions} = data
+    const {question} = questions[0]
+    console.log(data)
+    
     return (
-        <div className='col shadow-lg'>
-            <img style={{width:'300px'}} src={logo} alt="" />
-           <div className="d-flex justify-content-around mt-5">
-           <h2 className='text-success'>{name}</h2>
-            <Link to={`practice/${id}`}> <button className='border-0 p-2 bg-info rounded fw-bold'>Start Practice</button> </Link>
-           </div>
+        <div>
+            {
+                questions.map(quiz => <QuizFile quiz={quiz}></QuizFile>)
+            }
         </div>
     );
 };

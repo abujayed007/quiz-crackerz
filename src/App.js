@@ -25,7 +25,7 @@ function App() {
  ])
   return (
     <div className="App">
-      <ToastContainer position='top-center' />
+      <ToastContainer/>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

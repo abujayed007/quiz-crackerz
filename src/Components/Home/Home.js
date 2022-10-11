@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Header from '../Header/Header';
 import Topics from '../Topics/Topics';
 
 const Home = () => {
@@ -8,10 +9,13 @@ const Home = () => {
     // console.log(data)
 
     return (
-        <div className='row mt-5 gap-4 '>
-                {
+        <div>
+            <Header></Header>
+              <div className='row mt-5 gap-4 '>
+              {
                     data.map(quiz =><Topics key={quiz.id} quiz={quiz}></Topics>)
                 }
+              </div>
         </div>
     );
 };

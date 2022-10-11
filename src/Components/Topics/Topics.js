@@ -5,7 +5,7 @@ const Topics = ({quiz}) => {
     const {name, id, logo} = quiz
     // console.log(id)
     return (
-        <div style={{backgroundColor:'lightcyan'}} className='col shadow-lg rounded'>
+        <div style={{backgroundColor:'lightsteelblue'}} className='col shadow-lg rounded'>
             <img className='pt-2' style={{width:'300px'}} src={logo} alt="" />
            <div className="d-flex justify-content-around mt-5 mb-3">
            <h2 className='text-success'>{name}</h2>

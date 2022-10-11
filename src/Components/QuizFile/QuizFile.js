@@ -1,4 +1,7 @@
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
 const QuizFile = ({quiz}) => {
@@ -6,12 +9,28 @@ const QuizFile = ({quiz}) => {
 
    const handleCorrect =( event) =>{
        if(event === correctAnswer){
-        toast('Right Answer', {
+        toast.success('🦄 Wow Right Answer', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
             });
        }
         else {
-        toast('Wrong Answer')
-        // alert('wrong')
+            toast.error('Wrong Answer!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
        }
    }
 
@@ -19,8 +38,10 @@ const QuizFile = ({quiz}) => {
     return (
         <div>
         <div style={{backgroundColor:'lightskyblue'}}  className='mt-5 shadow-lg p-5 rounded'>
+            <div className='d-flex justify-content-between'>
             <h2 dangerouslySetInnerHTML={{__html: question}}></h2>
-            <h3>Correct Answer: {correctAnswer}</h3>
+          <Link><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></Link>
+            </div>
             <div className='row row-cols-2 mt-5'>
              {
                 options.map(option =>  <div>                    

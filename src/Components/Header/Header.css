@@ -10,13 +10,16 @@
     border-radius: 50%;
 }
 .header-img{
-background-image: url('./My\ project.jpg');
+background-image: url('https://c4.wallpaperflare.com/wallpaper/435/542/549/javascript-google-node-js-html-microsoft-visual-studio-hd-wallpaper-thumb.jpg');
 background-repeat: no-repeat;
-height: 650px;
+height: 310px;
+width: 1102px;
 display: flex;
 justify-content: center;
 align-items: center;
 }
-.bg-title{
-
+@media screen and (max-width: 600px) {
+    .header-img{
+        display: none;
+    }
 }

@@ -5,6 +5,9 @@ import Home from './Components/Home/Home';
 import Error from './Components/Error/Error';
 import Topics from './Components/Topics/Topics';
 import Quiz from './Components/Quiz/Quiz';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
  const router = createBrowserRouter([
@@ -22,6 +25,7 @@ function App() {
  ])
   return (
     <div className="App">
+      <ToastContainer position='top-center' />
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

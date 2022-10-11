@@ -16,7 +16,13 @@ height: 310px;
 width: 1102px;
 display: flex;
 justify-content: center;
-align-items: center;
+}
+.title{
+    font-style: oblique;
+    color: cornflowerblue;
+}
+.title:hover{
+    color: tomato;
 }
 @media screen and (max-width: 600px) {
     .header-img{

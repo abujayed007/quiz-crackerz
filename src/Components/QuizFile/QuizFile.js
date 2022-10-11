@@ -33,14 +33,28 @@ const QuizFile = ({quiz}) => {
                 });
        }
    }
-
+const answer = () =>{
+    const answer = correctAnswer;
+    if(answer){
+        toast(correctAnswer,{
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        })
+    }
+}
 
     return (
         <div>
-        <div style={{backgroundColor:'lightskyblue'}}  className='mt-5 shadow-lg p-5 rounded'>
+        <div style={{backgroundColor:'teal'}}  className='mt-5 shadow-lg p-5 rounded'>
             <div className='d-flex justify-content-between'>
             <h2 dangerouslySetInnerHTML={{__html: question}}></h2>
-          <Link><FontAwesomeIcon icon={faEye}></FontAwesomeIcon></Link>
+          <Link onClick={answer}><FontAwesomeIcon className='text-white ps-5' icon={faEye}></FontAwesomeIcon></Link>
             </div>
             <div className='row row-cols-2 mt-5'>
              {

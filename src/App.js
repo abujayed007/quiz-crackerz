@@ -7,6 +7,7 @@ import Topics from './Components/Topics/Topics';
 import Quiz from './Components/Quiz/Quiz';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Answers from './Components/Answers/Answers';
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
     loader: async ({params}) =>{
      return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
     },
-     element:<Quiz></Quiz>}
+     element:<Quiz></Quiz>},
+     {path:'blogs', element:<Answers></Answers>}
   ]},
-  {path:'/*', element:<Error></Error>}
+  {path:'/*', element:<Error></Error>},
  ])
   return (
     <div className="App">

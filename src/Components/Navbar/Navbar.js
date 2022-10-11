@@ -8,8 +8,7 @@ const Navbar = () => {
             <Link className='fs-2'> <img  src="../../icon.png" alt="" /> Programming Crackers</Link>
            <div className=' flex-sm-col mt-3'>
             <Link to='/'>Home</Link>
-            <Link to='/topics'>Topics</Link>
-            <Link to='blog'>Blog</Link>
+            <Link to='/blogs'>Blogs</Link>
             <Link to='about'>About</Link>
            </div>
         </div>

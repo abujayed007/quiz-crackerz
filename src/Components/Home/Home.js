@@ -10,6 +10,7 @@ const Home = () => {
 
     return (
         <div>
+            <Header></Header>
               <div className='row mt-5 gap-4 '>
               {
                     data.map(quiz =><Topics key={quiz.id} quiz={quiz}></Topics>)

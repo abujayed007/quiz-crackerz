@@ -6,8 +6,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const Statics = () => {
     const quizes = useLoaderData()
     const {data} = quizes
-    const {total} = data
-    console.log(data)
     return (
         <div className=' mt-5 container'>
              <ResponsiveContainer width="95%" height={400}>

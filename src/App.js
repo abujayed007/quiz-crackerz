@@ -8,30 +8,29 @@ import Quiz from './Components/Quiz/Quiz';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Answers from './Components/Answers/Answers';
-import About from './Components/About/About';
 import Statics from './Components/Statics/Statics';
-import Navbar from './Components/Navbar/Navbar';
+
 
 
 function App() {
  const router = createBrowserRouter([
   {path:'/', element:<Main></Main>, children:[
-    {path:'/',
-    loader:()=> fetch('https://openapi.programming-hero.com/api/quiz'),
-    element:<Home></Home> },
-    {path:'/practice/:id',
-    loader: async ({params}) =>{
-     return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
-    },
-     element:<Quiz></Quiz>},
-     {path:'blogs', element:<Answers></Answers>},
-     {path:'about', element:<About></About>},
-    {path:'/statics',
-    loader:async()=>  { return fetch('https://openapi.programming-hero.com/api/quiz')},
-    element:<Statics></Statics>}
+  {path:'/',
+  loader:()=> fetch('https://openapi.programming-hero.com/api/quiz'),
+  element:<Home></Home> },
+  {path:'/practice/:id',
+  loader: async ({params}) =>{
+  return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+  },
+  element:<Quiz></Quiz>},
+  {path:'blogs', element:<Answers></Answers>},
+  {path:'/statics',
+  loader:async()=> 
+  { return fetch('https://openapi.programming-hero.com/api/quiz')},
+  element:<Statics></Statics>}
   ]},
   {path:'/*', element:<Error></Error>},
- ])
+  ])
   return (
     <div className="App">
       <ToastContainer/>

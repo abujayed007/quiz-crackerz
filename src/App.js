@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Components/Main/Main';
 import Home from './Components/Home/Home';
 import Error from './Components/Error/Error';
-import Topics from './Components/Topics/Topics';
 import Quiz from './Components/Quiz/Quiz';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

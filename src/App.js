@@ -8,6 +8,9 @@ import Quiz from './Components/Quiz/Quiz';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Answers from './Components/Answers/Answers';
+import About from './Components/About/About';
+import Statics from './Components/Statics/Statics';
+import Navbar from './Components/Navbar/Navbar';
 
 
 function App() {
@@ -21,7 +24,11 @@ function App() {
      return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
     },
      element:<Quiz></Quiz>},
-     {path:'blogs', element:<Answers></Answers>}
+     {path:'blogs', element:<Answers></Answers>},
+     {path:'about', element:<About></About>},
+    {path:'/statics',
+    loader:async()=>  { return fetch('https://openapi.programming-hero.com/api/quiz')},
+    element:<Statics></Statics>}
   ]},
   {path:'/*', element:<Error></Error>},
  ])

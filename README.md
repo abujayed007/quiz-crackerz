@@ -6,4 +6,5 @@
 5. Make a topics option and set all topics 
 6. Make Quiz Option
 7. Set Toast 
+8. Answer All Questions
 
